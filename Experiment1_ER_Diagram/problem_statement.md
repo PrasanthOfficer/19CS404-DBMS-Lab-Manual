@@ -22,33 +22,15 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-[FitnessClub_ERDiagram_Prasanth.pdf](https://github.com/user-attachments/files/22570390/FitnessClub_ERDiagram_Prasanth.pdf)
+<img width="912" height="1041" alt="Screenshot 2025-09-27 090859" src="https://github.com/user-attachments/assets/00ef1e25-bf5f-4cea-98e5-01ee4b63dff8" />
+
 
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
-
----
+- Member (ID, Name, Contact, MembershipType, StartDate) - Trainer (ID, Name, Contact) - Program (Yoga, Weight Lifting, Zumba Dance) - Equipment - Payment (PaymentID) - Gym - Staff 
+Attributes: - Member  ID, Name, Contact, MembershipType, StartDate - Trainer  ID, Name, Contact - Program  ProgramName (Yoga, Zumba, Weight Lifting) - Payment  PaymentID 
+Relationships: - Member <-> Trainer (Trains) - Member <-> Equipment (Uses) - Trainer <-> Program (Tasks) - Program <-> Payment (Session) - Trainer <-> Gym (Has) - Gym <-> Staff (Has) 
 
 # Scenario B: City Library Event & Book Lending System
 
@@ -64,33 +46,20 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+<img width="721" height="735" alt="image" src="https://github.com/user-attachments/assets/4ff25a23-f7bc-4ae3-9f31-d7137aa716e8" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+The Central Library wants to manage both book lending and cultural events. 
+Requirements: 
 
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
-
----
+Members borrow books, with loan dates and return dates tracked.  
+Each book has details such as title, author, and category.  
+The library organizes events; members can register for them.  
+Each event has one or more speakers/authors.  
+Rooms in the library are booked for events and study purposes. 
+Overdue fines apply for late book returns.
 
 # Scenario C: Restaurant Table Reservation & Ordering
 
@@ -106,33 +75,20 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+
+<img width="903" height="1042" alt="Screenshot 2025-09-27 091026" src="https://github.com/user-attachments/assets/0a53be2e-0572-44f3-ba2c-c09d477ef77f" />
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+This ER Diagram represents a restaurant meal ordering system. 
+Entities: 
+1. Chef: - Attributes: chef_id, chef_name, chef_salary - Relationship: prepares Meal 
+2. Meal: - Attributes: Meal_name, Meal_price - Relationship: consists_of Ingredients - Prepared by Chef 
+3. Customers: - Attributes: Cust_id, Cust_name, Cust_address, Cust_phone - Relationship: orders Meal 
+4. Ingredients: - Attributes: ing_name, Description 
+5. Supplier: - Attributes: S_id, S_name, S_city - Relationship: attends Ingredients 
+Relationships:- Chef prepares Meal- Customers orders Meal- Meal consists_of Ingredients - Supplier attends Ingredients. 
 
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
-
----
 
 ## Instructions for Students
 
