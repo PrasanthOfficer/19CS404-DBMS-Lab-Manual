@@ -288,6 +288,9 @@ ALTER TABLE Companies add dob date;
 
 <img width="1244" height="509" alt="Screenshot 2025-09-27 083742" src="https://github.com/user-attachments/assets/6eac2730-ae19-4f23-9644-90275e249e54" />
 
+**Grade:**
+<img width="1330" height="228" alt="Screenshot 2025-09-27 084249" src="https://github.com/user-attachments/assets/d45da985-4592-4c41-8a9e-0a8dcdcd77e0" />
+
 
 
 ## RESULT
